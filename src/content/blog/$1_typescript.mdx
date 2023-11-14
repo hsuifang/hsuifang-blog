@@ -1,0 +1,61 @@
+---
+title: TypeScript 簡介
+date: '2023-11-13'
+tags: ['markdown']
+related: []
+draft: false
+summary: 統整TypeScript 簡介 - 說明及安裝
+---
+
+#TypeScript 
+# 什麼是TypeScript
+- Typescript 是一個由微軟所維護的開源程式碼
+- 提供**型別系統**和**對 ES6 的支援**
+- JavaScript 有些正式使用的規範，也是參照TypeScript。 如 :  field、class
+
+參考[官網](http://www.typescriptlang.org/)的定義：
+
+> TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. Any browser. Any host. Any OS. Open source.
+
+
+## 優缺點 Pros / Cons
+### 👍 可讀性及可維護性
+- Up to date documents - 看了函式定義就可以大概知道如何使用
+- Active Debugging - 可以在編譯時就發現大部份錯誤
+- Active development - 讓 IDE 的功能更為強大 ex: 程式碼自動完成, 跳轉...
+- 從 runtime 到 compile time 可以藉由 #type 來去防止潛在的錯誤
+
+###  👍 活躍的社群
+- Less likely to become deprecated - 微軟維護
+- TypeScript 擁抱了 ES6 規範，也支援部分 ESNext 草案的規範
+
+### 👎  成本
+- 學習成本 - 需要去理解 Interface、 #Generics 、Classes、Enums
+- Requires compilation - 需要透過一些編譯器
+
+# 環境建置 (install)
+
+## 安裝 TypeScript
+
+*global*
+> npm i -g  typescript
+
+因為安裝在global，可以用輕易 tsc 指令 做變化。 ex：`tsc hello.ts`
+
+*local*
+> npm install -D typescript@4.8.4
+
+
+## 新增 tsconfig.json
+>  tsc -init
+
+## 實作簡易 及編譯 ts 
+``` js
+// 新增`hello.ts`
+let sayHello: string = 'hello world'
+```
+
+``` js
+`tsc hello.ts`  // Compiles the current project (tsconfig.json in the working directory.)
+`tsc --watch` // 來進行監控
+```
